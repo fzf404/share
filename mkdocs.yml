@@ -1,0 +1,27 @@
+site_name: 技术宅入门指南
+
+theme:
+  name: material
+  logo: 'assets/logo.png'
+  favicon: assets/logo.png
+  palette:
+    primary: deep purple
+    accent: orange
+    scheme: slate
+  language: "zh"
+
+markdown_extensions:
+  - admonition            # 注意
+  - pymdownx.details      # 折叠注意
+  - pymdownx.superfences  # 注意中嵌套代码和内容块
+  - pymdownx.highlight    # 代码高亮
+
+extra:
+  homepage: https://www.fzf404.top
+  # social:
+  #   - type: 'github'
+  #     link: 'https://github.com/squidfunk'
+  #   - type: 'twitter'
+  #     link: 'https://twitter.com/squidfunk'
+  #   - type: 'linkedin'
+  #     link: 'https://www.linkedin.com/in/squidfunk'
