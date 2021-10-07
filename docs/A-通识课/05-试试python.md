@@ -1,6 +1,6 @@
 > python基础
 >
-> win32API
+> flask后端开发
 
 ## Python基础
 
@@ -24,7 +24,7 @@ while True:
 # 条件循环
 i = 10
 while i > 0:
-  print("倒数s: ", i)
+  print("倒数10下: ", i)
   i-=1		# i=i-1
   
 # 条件判断
@@ -51,12 +51,43 @@ for i in a_list:
   print(i)
 ```
 
-## 保存数据
+## 写个接口吧
 
-## 简单的接口
+```python
+from flask import Flask, request
 
+# 新建服务
+server = Flask("first_flask")
+
+# 发送的数据
+data = {
+    "name": "张大三",
+    "sex": 0,
+    "intro": "大一学生，就读于沈阳理工大学物联网专业。",
+    "about": "身体健康，大脑健全，心态良好，反诈骗能力高。啥都不会，进去想学东西的，emmmm没了。"
+}
+
+# 定义路由
+@server.route('/')
+def index():
+    return 'Hello Flask!'
+
+# 定义路由
+@server.route('/info')
+def get_info():
+    return data
+
+# 开启服务
+server.run('127.0.0.1', port=8080)
+
+
+# 前端修改请求地址
+http://127.0.0.1:8080/info
+```
 
 ## 课后
+
+
 
 ### 作业
 
