@@ -87,8 +87,13 @@ http://127.0.0.1:8080/info
 
 ## 课后
 
-
-
 ### 作业
 
+1. 使用python打印九九乘法表
+2. 完成自我介绍页的前后端，传至Gitee
+
 ### 推荐阅读
+
+[python基础知识总结](https://zhuanlan.zhihu.com/p/56595142)
+
+[2333一个挺有趣的flask教程](https://zhuanlan.zhihu.com/p/73278003)
