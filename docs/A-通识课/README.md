@@ -6,8 +6,9 @@
 
 
 - [教案传送门](https://share.fzf404.top/)
-- [B站传送门（未开放）]()
+- [B站传送门](https://www.bilibili.com/video/BV1kL4y1B7s5)
 - [成品传送门](http://pre.fzf404.top/)
+- [源码传送门（暂未开放）](https://gitee.com/nmdfzf404/share-code)
 
 !!! note "PS"
     课程信息密度较大，可能觉得能听懂，但是写不出来，这是正常情况。
