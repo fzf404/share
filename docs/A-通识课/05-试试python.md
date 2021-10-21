@@ -4,7 +4,7 @@
 
 ## Python基础
 
-> 一门新的脚本语言
+> 互联网上最热门的编程语言。
 >
 > [下载地址](https://www.python.org/downloads/windows/)
 >
@@ -15,18 +15,28 @@
 $ python
 >>> print('hello world')
 helloworld
+>>> answer = input("你的名字：")
+
+# Ctrl + Z 后按Enter，退出交互界面
 
 # 数据类型
 a_num = 404
+type(a_num)
+
 a_str = "这是一个字符串"
+a_str[4]
+a_str[1:4]	# 第二个字符到第四个字符
+type(a_str)
 
 # 列表
 a_list = ["你好", 'π', "你的值为: ", 3.14]	
-a_list[0]	# 第0个值, 与c语言数组一样
-a_list[0:2]	# 第0个和第1个值
+type(a_str)	# 类型
+a_list[0]	# 第1个值, 与c语言数组一样
+a_list[0:2]	# 第1个和第2个值
 a_list[2:] # 第2个值到最后一个值
 
 a_dict = { "name": "fzf404", "age":19 }		# 字典
+type(a_dict)
 a_dict['name']	# 取值
 
 
@@ -106,12 +116,14 @@ json_file.close()
 
 ### Ping
 
+> 启动：`python 01-hello.py`
+
 ```python
 from flask import Flask
 
 server = Flask('app')
 
-@serve.route('/')
+@server.route('/')
 def index():
   return 'Hello Flask!'
 
