@@ -5,6 +5,10 @@
 ## Python基础
 
 > 一门新的脚本语言
+>
+> [下载地址](https://www.python.org/downloads/windows/)
+>
+> 版本：`3.8.10 win-64`
 
 ```python
 # 进入交互式界面
@@ -13,13 +17,24 @@ $ python
 helloworld
 
 # 数据类型
-a_str = "这是一个字符串"
 a_num = 404
-a_list = ["你好", 'π', "你的值为: ", math.pi]
+a_str = "这是一个字符串"
+
+# 列表
+a_list = ["你好", 'π', "你的值为: ", 3.14]	
+a_list[0]	# 第0个值, 与c语言数组一样
+a_list[0:2]	# 第0个和第1个值
+a_list[2:] # 第2个值到最后一个值
+
+a_dict = { "name": "fzf404", "age":19 }		# 字典
+a_dict['name']	# 取值
+
 
 # 循环
 while True:
   print('hello world')
+  print('你好世界')
+print('世界不好')
   
 # 条件循环
 i = 10
@@ -36,36 +51,103 @@ elif answer == 'yes':
 else:
   print("肮脏的人类")
   
+  
 # 引入扩展包
 import math
 import time
+import json
+
+# 可以在任意位置写语句
+a_list = ["你好", 'π', "你的值为: ", math.pi]
 
 # for 循环
 print("计时开始")
 for i in range(0, 10):
   print(i)
   time.sleep(1)
+  
+# 类型转换
+str(404)
+list(range(0,10))
           
 # 遍历列表
 for i in a_list:
   print(i)
+  
+# 函数
+def add(a, b):
+  return a + b
+  
+  
+# 打开文件
+json_file = open('info.json','r')
+
+# 读取文件为字符串
+json_data = json_file.read()
+# 字符串转字典
+json_dict = json.loads(json_data)
+# 字典取值
+json_dict["name"]
+
+# 关闭文件
+json_file.close()
 ```
+
+### 语法特点
+
+1. 弱类型语言，无需指定变量类型就可以使用变量
+2. 使用缩进确认代码归属，无需大括号和分号
 
 ## 写个接口吧
 
+> 使用`flask`写后端
+>
+> 安装第三方库：`pip install flask`
+
+### Ping
+
 ```python
-from flask import Flask, request
+from flask import Flask
+
+server = Flask('app')
+
+@serve.route('/')
+def index():
+  return 'Hello Flask!'
+
+server.run()
+
+'''
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+'''
+```
+
+### Info
+
+```python
+from flask import Flask
 
 # 新建服务
-server = Flask("first_flask")
+server = Flask("app")
 
 # 发送的数据
 data = {
-    "name": "张大三",
+    "name": "王山而",
     "sex": 0,
     "intro": "大一学生，就读于沈阳理工大学物联网专业。",
     "about": "身体健康，大脑健全，心态良好，反诈骗能力高。啥都不会，进去想学东西的，emmmm没了。"
 }
+
+# 第二种方式
+file = open('info.json','r')
+data = json_file.read()
+file.close()
+
 
 # 定义路由
 @server.route('/')
@@ -83,6 +165,76 @@ server.run('127.0.0.1', port=8080)
 
 # 前端修改请求地址
 http://127.0.0.1:8080/info
+```
+
+### csv文件
+
+> 以纯文本格式存储表格内容
+
+- 存至：`data.csv`
+
+```sql
+2010020115,孟祥瑞,0,一枚艺术生，就读于沈阳理工大学动画专业。,是修炼中的全栈开发者，左派社会主义接班人，理想主义建政带师。社会化抚养推动者，继承制及死刑的反对者。轨道交通迷。
+2010020116,王山而,1,大一学生，就读于沈阳理工大学艺术设计专业。,身体健康，大脑健全，审美良好，抗压能力强。啥都不会，进去想学东西的，emmmm没了。
+```
+
+读取文件
+
+```python
+import csv
+
+data_raw = csv.reader(open(data_path, 'r'))
+
+# 遍历列表
+for item in data:
+  print("学号：", item[0])
+  print("姓名：", item[2])
+  print("源信息：", item)
+```
+
+### 完成接口
+
+```python
+'''
+Author: fzf404
+Date: 2021-10-21 17:36:31
+LastEditTime: 2021-10-21 17:46:28
+Description: description
+'''
+
+import csv
+from flask import Flask, request
+
+server = Flask('app')
+
+data_path = 'data.csv'
+
+
+@server.route('/info')
+def get_info():
+  # 获得url中的id
+  user_id = request.args.get('id')
+  
+  data = csv.reader(open(data_path, 'r'))
+
+  for item in data:
+    if item[0] == user_id:
+      return {
+          "name": item[1],
+          "sex": item[2],
+          "intro": item[3],
+          "about": item[4]
+      }
+    
+  return {
+    "name": None,
+    "sex": None,
+    "intro": None,
+    "about": None
+  }
+
+# 开启服务
+server.run('127.0.0.1', port=8080)
 ```
 
 ## 课后
