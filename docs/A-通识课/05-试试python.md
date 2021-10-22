@@ -157,7 +157,7 @@ data = {
 
 # 第二种方式
 file = open('info.json','r',encoding='utf-8')
-data = json_file.read()
+data = file.read()
 file.close()
 
 
