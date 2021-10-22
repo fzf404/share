@@ -32,7 +32,7 @@ type(a_str)
 a_list = ["你好", 'π', "你的值为: ", 3.14]	
 type(a_str)	# 类型
 a_list[0]	# 第1个值, 与c语言数组一样
-a_list[0:2]	# 第1个和第2个值
+a_list[0:3]	# 第1个到第3个值
 a_list[2:] # 第2个值到最后一个值
 
 a_dict = { "name": "fzf404", "age":19 }		# 字典
@@ -90,7 +90,7 @@ def add(a, b):
   
   
 # 打开文件
-json_file = open('info.json','r')
+json_file = open('info.json','r',encoding='utf-8')
 
 # 读取文件为字符串
 json_data = json_file.read()
@@ -156,7 +156,7 @@ data = {
 }
 
 # 第二种方式
-file = open('info.json','r')
+file = open('info.json','r',encoding='utf-8')
 data = json_file.read()
 file.close()
 
@@ -182,6 +182,8 @@ http://127.0.0.1:8080/info
 ### csv文件
 
 > 以纯文本格式存储表格内容
+>
+> vscode插件：`Rainbow CSV`
 
 - 存至：`data.csv`
 
@@ -195,7 +197,9 @@ http://127.0.0.1:8080/info
 ```python
 import csv
 
-data_raw = csv.reader(open(data_path, 'r'))
+data_path='data.csv'
+
+data_raw = csv.reader(open(data_path, 'r', encoding='utf-8'))
 
 # 遍历列表
 for item in data:
@@ -227,7 +231,7 @@ def get_info():
   # 获得url中的id
   user_id = request.args.get('id')
   
-  data = csv.reader(open(data_path, 'r'))
+  data = csv.reader(open(data_path, 'r', encoding='utf-8'))
 
   for item in data:
     if item[0] == user_id:
