@@ -114,7 +114,7 @@ json_file.close()
 >
 > 安装第三方库：`pip install flask`
 
-### Ping
+### Hello
 
 > 启动：`python 01-hello.py`
 
@@ -192,32 +192,38 @@ http://127.0.0.1:8080/info
 2010020116,王山而,1,大一学生，就读于沈阳理工大学艺术设计专业。,身体健康，大脑健全，审美良好，抗压能力强。啥都不会，进去想学东西的，emmmm没了。
 ```
 
-读取文件
+#### 读取文件
 
 ```python
 import csv
 
-data_path='data.csv'
+data_path = 'data.csv'
 
-data_raw = csv.reader(open(data_path, 'r', encoding='utf-8'))
+# 打开csv文件
+file_csv = open(data_path, 'r', encoding='utf-8')
+
+# 读取csv内容为str
+# str_csv = file_csv.read()
+
+# 将内容解析出来
+object_csv = csv.reader(file_csv)	# 可以使用for遍历
+
+# 关闭文件
+file_csv.close()
+
+# 转换为二维列表
+list_csv = list(object_csv)
 
 # 遍历列表
-for item in data:
+for item in list_csv:
   print("学号：", item[0])
   print("姓名：", item[2])
   print("源信息：", item)
 ```
 
-### 完成接口
+### 获取前端传来的信息
 
 ```python
-'''
-Author: fzf404
-Date: 2021-10-21 17:36:31
-LastEditTime: 2021-10-21 17:46:28
-Description: description
-'''
-
 import csv
 from flask import Flask, request
 
@@ -225,13 +231,43 @@ server = Flask('app')
 
 data_path = 'data.csv'
 
-
 @server.route('/info')
+def get_info():
+  
+  # 获得url中的id
+  user_id = request.args.get('id')
+  
+  print("用户ID：", user_id)
+  
+  # 所有接口必须有返回值
+  return 'Test Get ID'
+```
+
+### 完成接口
+
+```python
+import csv
+from flask import Flask, request
+
+server = Flask('app')
+
+data_path = 'data.csv'
+
+@server.route('/api/info')
 def get_info():
   # 获得url中的id
   user_id = request.args.get('id')
   
-  data = csv.reader(open(data_path, 'r', encoding='utf-8'))
+  # 打开文件
+  file = open(data_path, 'r', encoding='utf-8')
+  # 转换为列表
+  data = csv.reader(file)
+  # 关闭文件
+  file.close()
+  
+  # 更简单的方法
+  with open(data_path, 'r', encoding='utf-8') as f:
+    data = csv.reader(file)
 
   for item in data:
     if item[0] == user_id:
@@ -242,6 +278,7 @@ def get_info():
           "about": item[4]
       }
     
+  # 没有匹配，则返回空
   return {
     "name": None,
     "sex": None,
