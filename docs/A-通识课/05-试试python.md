@@ -25,19 +25,19 @@ type(a_num)
 
 a_str = "这是一个字符串"
 a_str[4]
-a_str[1:4]	# 第二个字符到第四个字符
+a_str[1:4] # 第二个字符到第四个字符
 type(a_str)
 
 # 列表
-a_list = ["你好", 'π', "你的值为: ", 3.14]	
-type(a_str)	# 类型
-a_list[0]	# 第1个值, 与c语言数组一样
-a_list[0:3]	# 第1个到第3个值
+a_list = ["你好", 'π', "你的值为: ", 3.14]    
+type(a_str) # 类型
+a_list[0] # 第1个值, 与c语言数组一样
+a_list[0:3] # 第1个到第3个值
 a_list[2:] # 第2个值到最后一个值
 
-a_dict = { "name": "fzf404", "age":19 }		# 字典
+a_dict = { "name": "fzf404", "age":19 } # 字典
 type(a_dict)
-a_dict['name']	# 取值
+a_dict['name'] # 取值
 
 
 # 循环
@@ -50,7 +50,7 @@ print('世界不好')
 i = 10
 while i > 0:
   print("倒数10下: ", i)
-  i-=1		# i=i-1
+  i-=1 # i=i-1
   
 # 条件判断
 answer = input("你是猪吗？")
@@ -147,20 +147,6 @@ from flask import Flask
 # 新建服务
 server = Flask("app")
 
-# 发送的数据
-data = {
-    "name": "王山而",
-    "sex": 0,
-    "intro": "大一学生，就读于沈阳理工大学物联网专业。",
-    "about": "身体健康，大脑健全，心态良好，反诈骗能力高。啥都不会，进去想学东西的，emmmm没了。"
-}
-
-# 第二种方式
-file = open('info.json','r',encoding='utf-8')
-data = file.read()
-file.close()
-
-
 # 定义路由
 @server.route('/')
 def index():
@@ -169,11 +155,28 @@ def index():
 # 定义路由
 @server.route('/info')
 def get_info():
+  
+    # 发送的数据
+    data = {
+        "name": "王山而",
+        "sex": 0,
+        "intro": "大一学生，就读于沈阳理工大学物联网专业。",
+        "about": "身体健康，大脑健全，心态良好，反诈骗能力高。啥都不会，进去想学东西的，emmmm没了。"
+    }
+    
+    # 第二种方式
+    file = open('info.json','r',encoding='utf-8')
+    data = file.read()
+    file.close()
+    
+    # 更高级的方式
+    with open(data_path, 'r', encoding='utf-8') as f:
+        data = file.read()
+    
     return data
 
 # 开启服务
 server.run('127.0.0.1', port=8080)
-
 
 # 前端修改请求地址
 http://127.0.0.1:8080/info
@@ -206,7 +209,7 @@ file_csv = open(data_path, 'r', encoding='utf-8')
 # str_csv = file_csv.read()
 
 # 将内容解析出来
-object_csv = csv.reader(file_csv)	# 可以使用for遍历
+object_csv = csv.reader(file_csv) # 可以使用for遍历
 
 # 关闭文件
 file_csv.close()
@@ -262,12 +265,6 @@ def get_info():
   file = open(data_path, 'r', encoding='utf-8')
   # 转换为列表
   data = csv.reader(file)
-  # 关闭文件
-  file.close()
-  
-  # 更简单的方法
-  with open(data_path, 'r', encoding='utf-8') as f:
-    data = csv.reader(file)
 
   for item in data:
     if item[0] == user_id:
@@ -277,6 +274,9 @@ def get_info():
           "intro": item[3],
           "about": item[4]
       }
+    
+  # 关闭文件
+  file.close()
     
   # 没有匹配，则返回空
   return {
