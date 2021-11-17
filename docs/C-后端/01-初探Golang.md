@@ -1,4 +1,6 @@
 > 踏入Golang的大门
+>
+> [教案](https://tour.go-zh.org/welcome/1)
 
 ## 环境安装
 
