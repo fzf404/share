@@ -149,7 +149,7 @@ I'm death
 
 ## 作业
 
-1. 完成此函数(切片)
+1. 完成此程序(切片)
 
     ```go
     package main
@@ -157,6 +157,7 @@ I'm death
     import "fmt"
     
     /**
+     * TODO:
      * @description: 向切片指定位置插入值
      * @param {[]int} source 源切片
      * @param {int} postion 插入位置
@@ -185,6 +186,7 @@ I'm death
     package main
     
     /**
+    * TODO:
     * @description: 求n的n次方
     */
     func square(n int64) func() int64 {
@@ -199,7 +201,7 @@ I'm death
     	}
     }
     
-    /*
+    /* 输出:
     4
     16
     256
@@ -260,6 +262,14 @@ I'm death
     	// 计算最高分并打印
     	print("最高分为: ", No1(students).name)
     }
+    
+    /* 输出:
+    王山而 :  270
+    卢成朋 :  316
+    王海燕 :  315
+    最高分为: 卢成朋⏎                                                     
+    
+    */
     ```
 
     
