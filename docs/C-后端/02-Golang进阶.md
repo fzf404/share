@@ -213,12 +213,18 @@ I'm death
 3. 完成此程序(结构体及方法)
 
     ```go
+    /*
+     * @Author: fzf404
+     * @Date: 2021-11-24 14:26:30
+     * @LastEditTime: 2021-11-24 19:34:32
+     * @Description: 运维作业-3
+     */
     package main
     
     type Scores struct {
-      chinese uint // 语文成绩
-      math uint // 数学成绩
-      english uint // 英语成绩
+    	chinese uint // 语文成绩
+    	math    uint
+    	english uint
     }
     
     /*
@@ -226,15 +232,15 @@ I'm death
      * @description: 为Score结构体定义求成绩总和的方法
      * @param {Scores} s Scores结构体
      * @return {uint} 总成绩
-    */
+     */
     func (s Scores) sum() uint {
       // 提示: 求三科成绩的总和
     }
     
     type Student struct {
-    	id uint // 学号
-    	name string // 姓名
-      scores Scores // 成绩 
+    	id     uint   // 学号
+    	name   string // 姓名
+    	scores Scores // 成绩
     }
     
     /**
@@ -244,20 +250,19 @@ I'm death
      * @return {Student} 最高分结构体
      */
     func No1(students []Student) Student {
-    	// 定义空Student, 遍历Students切片, 查看成绩是否大于新建的Student, 大于则覆盖,不大于则下一个
+      // 提示: 定义空Student, 遍历Students切片, 查看成绩是否大于新建的Student, 大于则覆盖,不大于则下一个
     }
     
-    
-    func main(){
-      // 新建三个同学
-      students := []Student{
-        Student{2010020115,"王山而",Scores{96,84,90}},
-    		Student{1903060321,"卢成朋",Scores{103,92,121}},
-    		Student{1903060320,"王海燕",Scores{99,113,103}},
-      }
+    func main() {
+    	// 新建三个同学
+    	students := []Student{
+    		Student{2010020115, "王山而", Scores{96, 84, 90}},
+    		Student{1903060321, "卢成朋", Scores{103, 92, 121}},
+    		Student{1903060320, "王海燕", Scores{99, 113, 103}},
+    	}
     	// 遍历每个同学, 打印出他们的分数
-    	for _,student := range students {
-    		println(student.name,": ",student.scores.sum())
+    	for _, student := range students {
+    		println(student.name, ": ", student.scores.sum())
     	}
     	// 计算最高分并打印
     	print("最高分为: ", No1(students).name)
