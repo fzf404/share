@@ -1,4 +1,4 @@
-### 爬一下b站热榜
+### 爬一下 b 站热榜
 
 > `pip install requests`
 >

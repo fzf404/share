@@ -16,9 +16,9 @@ theme:
   logo: "assets/logo.png"
   favicon: assets/logo.png
   palette:
-    - scheme: slate 
+    - scheme: slate
       primary: deep purple
-      accent: orange      
+      accent: orange
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode

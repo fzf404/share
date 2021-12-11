@@ -1,12 +1,12 @@
-> 踏入Golang的大门
+> 踏入 Golang 的大门
 >
 > [教案](https://tour.go-zh.org/welcome/1)
 
 ## 环境安装
 
-1. 安装vscode
-2. 安装go1.16
-3. vscode安装golang插件
+1. 安装 vscode
+2. 安装 go1.16
+3. vscode 安装 golang 插件
 4. 安装完成后验证
 
 ```bash
@@ -90,11 +90,11 @@ var python string = "Good"
 func main() {
   // 变量赋值
   c = true
-  
+
   // 自动数据类型
   java := "No"
   golang := 666
-  
+
   // 不换行打印
   fmt.Print(c)
   // 换行打印
@@ -118,17 +118,17 @@ import "fmt"
 
 func main() {
 	sum := 0
-  
+
   // 初始化 判断 一次循环后执行
 	for i := 0; i < 10; i++ {
 		sum += i
 	}
 	fmt.Println(sum)
-  
+
   // 无限循环
   for {
 	}
-  
+
 }
 ```
 
@@ -209,7 +209,7 @@ func main() {
 1. 初始化名为`learn-go`的项目
 2. 新建名为`utils`的包
 3. 在包中实现三个函数
-    - `*`号打印金字塔
-    - 打印九九乘法表
-    - 计算斐波那契数列, 传入计算位数, 输出值
-4. 在main函数中调用这三个函数
+   - `*`号打印金字塔
+   - 打印九九乘法表
+   - 计算斐波那契数列, 传入计算位数, 输出值
+4. 在 main 函数中调用这三个函数
