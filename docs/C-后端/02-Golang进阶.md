@@ -1,4 +1,4 @@
-> go的更多语法
+> go 的更多语法
 
 ## 数组、切片与映射
 
@@ -57,7 +57,7 @@ items := make(map[string]int)
 items["first"] = 1
 items["mid"] = 2
 items["last"] = 4
-// 删除键值对 
+// 删除键值对
 delete(items, "mid")
 // 快速创建
 payload := map[string]interface{}{
@@ -151,130 +151,127 @@ I'm death
 
 1. 完成此程序(切片)
 
-    ```go
-    package main
-    
-    import "fmt"
-    
-    /**
-     * TODO:
-     * @description: 向切片指定位置插入值
-     * @param {[]int} source 源切片
-     * @param {int} postion 插入位置
-     * @param {[]int} target 需要插入的切片
-     * @return {[]int} 返回值
-     */
-    func SliceInsert(source []int, postion int, target []int) []int {
-    	// 提示: 新建result切片 使用for循环遍历source 当index==postion时 遍历taget, 将value插入result中
-    }
-    
-    func main() {
-    	source := []int{1, 4, 5, 6}
-    	target := []int{2, 3}
-    	fmt.Println(SliceInsert(source, 1, target))
-    }
-    
-    /* 输出:
-    [1 2 3 4 5 6]
+   ```go
+   package main
+
+   import "fmt"
+
+   /**
+    * TODO:
+    * @description: 向切片指定位置插入值
+    * @param {[]int} source 源切片
+    * @param {int} postion 插入位置
+    * @param {[]int} target 需要插入的切片
+    * @return {[]int} 返回值
     */
-    
-    ```
+   func SliceInsert(source []int, postion int, target []int) []int {
+   	// 提示: 新建result切片 使用for循环遍历source 当index==postion时 遍历taget, 将value插入result中
+   }
+
+   func main() {
+   	source := []int{1, 4, 5, 6}
+   	target := []int{2, 3}
+   	fmt.Println(SliceInsert(source, 1, target))
+   }
+
+   /* 输出:
+   [1 2 3 4 5 6]
+   */
+
+   ```
 
 2. 完成此程序(闭包)
 
-    ```go
-    package main
-    
-    /**
-    * TODO:
-    * @description: 求n的n次方
-    */
-    func square(n int64) func() int64 {
-      // 提示: 很简单, 返回一个函数, 内部是n*n
-    }
-    
-    func main() {
-    	f := square(2)
-    	for i := 0; i < 5; i++ {
-    		// 将会打印n的n次方
-    		println(f())
-    	}
-    }
-    
-    /* 输出:
-    4
-    16
-    256
-    65536
-    4294967296
-    */
-    ```
+   ```go
+   package main
+
+   /**
+   * TODO:
+   * @description: 求n的n次方
+   */
+   func square(n int64) func() int64 {
+     // 提示: 很简单, 返回一个函数, 内部是n*n
+   }
+
+   func main() {
+   	f := square(2)
+   	for i := 0; i < 5; i++ {
+   		// 将会打印n的n次方
+   		println(f())
+   	}
+   }
+
+   /* 输出:
+   4
+   16
+   256
+   65536
+   4294967296
+   */
+   ```
 
 3. 完成此程序(结构体及方法)
 
-    ```go
-    /*
-     * @Author: fzf404
-     * @Date: 2021-11-24 14:26:30
-     * @LastEditTime: 2021-11-24 19:34:32
-     * @Description: 运维作业-3
-     */
-    package main
-    
-    type Scores struct {
-    	chinese uint // 语文成绩
-    	math    uint
-    	english uint
-    }
-    
-    /*
-     * TODO:
-     * @description: 为Score结构体定义求成绩总和的方法
-     * @param {Scores} s Scores结构体
-     * @return {uint} 总成绩
-     */
-    func (s Scores) sum() uint {
-      // 提示: 求三科成绩的总和
-    }
-    
-    type Student struct {
-    	id     uint   // 学号
-    	name   string // 姓名
-    	scores Scores // 成绩
-    }
-    
-    /**
-     * TODO:
-     * @description: 找出切片中成绩最高的同学
-     * @param {[]Student} students 全部学生的切片
-     * @return {Student} 最高分结构体
-     */
-    func No1(students []Student) Student {
-      // 提示: 定义空Student, 遍历Students切片, 查看成绩是否大于新建的Student, 大于则覆盖,不大于则下一个
-    }
-    
-    func main() {
-    	// 新建三个同学
-    	students := []Student{
-    		Student{2010020115, "王山而", Scores{96, 84, 90}},
-    		Student{1903060321, "卢成朋", Scores{103, 92, 121}},
-    		Student{1903060320, "王海燕", Scores{99, 113, 103}},
-    	}
-    	// 遍历每个同学, 打印出他们的分数
-    	for _, student := range students {
-    		println(student.name, ": ", student.scores.sum())
-    	}
-    	// 计算最高分并打印
-    	print("最高分为: ", No1(students).name)
-    }
-    
-    /* 输出:
-    王山而 :  270
-    卢成朋 :  316
-    王海燕 :  315
-    最高分为: 卢成朋
+   ```go
+   /*
+    * @Author: fzf404
+    * @Date: 2021-11-24 14:26:30
+    * @LastEditTime: 2021-11-24 19:34:32
+    * @Description: 运维作业-3
     */
-    ```
+   package main
 
-    
+   type Scores struct {
+   	chinese uint // 语文成绩
+   	math    uint
+   	english uint
+   }
 
+   /*
+    * TODO:
+    * @description: 为Score结构体定义求成绩总和的方法
+    * @param {Scores} s Scores结构体
+    * @return {uint} 总成绩
+    */
+   func (s Scores) sum() uint {
+     // 提示: 求三科成绩的总和
+   }
+
+   type Student struct {
+   	id     uint   // 学号
+   	name   string // 姓名
+   	scores Scores // 成绩
+   }
+
+   /**
+    * TODO:
+    * @description: 找出切片中成绩最高的同学
+    * @param {[]Student} students 全部学生的切片
+    * @return {Student} 最高分结构体
+    */
+   func No1(students []Student) Student {
+     // 提示: 定义空Student, 遍历Students切片, 查看成绩是否大于新建的Student, 大于则覆盖,不大于则下一个
+   }
+
+   func main() {
+   	// 新建三个同学
+   	students := []Student{
+   		Student{2010020115, "王山而", Scores{96, 84, 90}},
+   		Student{1903060321, "卢成朋", Scores{103, 92, 121}},
+   		Student{1903060320, "王海燕", Scores{99, 113, 103}},
+   	}
+   	// 遍历每个同学, 打印出他们的分数
+   	for _, student := range students {
+   		println(student.name, ": ", student.scores.sum())
+   	}
+   	// 计算最高分并打印
+   	print("最高分为: ", No1(students).name)
+   }
+
+   /* 输出:
+   王山而 :  270
+   卢成朋 :  316
+   王海燕 :  315
+   最高分为: 卢成朋
+   */
+   ```

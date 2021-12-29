@@ -1,8 +1,8 @@
-> python基础
+> python 基础
 >
-> flask后端开发
+> flask 后端开发
 
-## Python基础
+## Python 基础
 
 > 互联网上最热门的编程语言。
 >
@@ -29,7 +29,7 @@ a_str[1:4] # 第二个字符到第四个字符
 type(a_str)
 
 # 列表
-a_list = ["你好", 'π', "你的值为: ", 3.14]    
+a_list = ["你好", 'π', "你的值为: ", 3.14]
 type(a_str) # 类型
 a_list[0] # 第1个值, 与c语言数组一样
 a_list[0:3] # 第1个到第3个值
@@ -45,13 +45,13 @@ while True:
   print('hello world')
   print('你好世界')
 print('世界不好')
-  
+
 # 条件循环
 i = 10
 while i > 0:
   print("倒数10下: ", i)
   i-=1 # i=i-1
-  
+
 # 条件判断
 answer = input("你是猪吗？")
 if answer == '是':
@@ -60,8 +60,8 @@ elif answer == 'yes':
   print("so cute")
 else:
   print("肮脏的人类")
-  
-  
+
+
 # 引入扩展包
 import math
 import time
@@ -75,20 +75,20 @@ print("计时开始")
 for i in range(0, 10):
   print(i)
   time.sleep(1)
-  
+
 # 类型转换
 str(404)
 list(range(0,10))
-          
+
 # 遍历列表
 for i in a_list:
   print(i)
-  
+
 # 函数
 def add(a, b):
   return a + b
-  
-  
+
+
 # 打开文件
 json_file = open('info.json','r',encoding='utf-8')
 
@@ -155,7 +155,7 @@ def index():
 # 定义路由
 @server.route('/info')
 def get_info():
-  
+
     # 发送的数据
     data = {
         "name": "王山而",
@@ -163,16 +163,16 @@ def get_info():
         "intro": "大一学生，就读于沈阳理工大学物联网专业。",
         "about": "身体健康，大脑健全，心态良好，反诈骗能力高。啥都不会，进去想学东西的，emmmm没了。"
     }
-    
+
     # 第二种方式
     file = open('info.json','r',encoding='utf-8')
     data = file.read()
     file.close()
-    
+
     # 更高级的方式
     with open(data_path, 'r', encoding='utf-8') as f:
         data = f.read()
-    
+
     return data
 
 # 开启服务
@@ -182,11 +182,11 @@ server.run('127.0.0.1', port=8080)
 http://127.0.0.1:8080/info
 ```
 
-### csv文件
+### csv 文件
 
 > 以纯文本格式存储表格内容
 >
-> vscode插件：`Rainbow CSV`
+> vscode 插件：`Rainbow CSV`
 
 - 存至：`data.csv`
 
@@ -236,12 +236,12 @@ data_path = 'data.csv'
 
 @server.route('/info')
 def get_info():
-  
+
   # 获得url中的id
   user_id = request.args.get('id')
-  
+
   print("用户ID：", user_id)
-  
+
   # 所有接口必须有返回值
   return 'Test Get ID'
 ```
@@ -260,7 +260,7 @@ data_path = 'data.csv'
 def get_info():
   # 获得url中的id
   user_id = request.args.get('id')
-  
+
   # 打开文件
   file = open(data_path, 'r', encoding='utf-8')
   # 转换为列表
@@ -274,10 +274,10 @@ def get_info():
           "intro": item[3],
           "about": item[4]
       }
-    
+
   # 关闭文件
   file.close()
-    
+
   # 没有匹配，则返回空
   return {
     "name": None,
@@ -294,11 +294,11 @@ server.run('127.0.0.1', port=8080)
 
 ### 作业
 
-1. 使用python打印九九乘法表
-2. 完成自我介绍页的前后端，传至Gitee
+1. 使用 python 打印九九乘法表
+2. 完成自我介绍页的前后端，传至 Gitee
 
 ### 推荐阅读
 
-[python基础知识总结](https://zhuanlan.zhihu.com/p/56595142)
+[python 基础知识总结](https://zhuanlan.zhihu.com/p/56595142)
 
-[2333一个挺有趣的flask教程](https://zhuanlan.zhihu.com/p/73278003)
+[2333 一个挺有趣的 flask 教程](https://zhuanlan.zhihu.com/p/73278003)

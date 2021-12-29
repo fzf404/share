@@ -13,8 +13,6 @@ apt install nginx
 /etc/nginx/sites-eable/
 ```
 
-
-
 ## 返回字符串
 
 ```nginx
@@ -23,7 +21,7 @@ server {
     	# 监听80端口
         listen 80 default_server;
         listen [::]:80 default_server;
-    
+
     	# 默认静态页目录
         root /var/www/html;
 
@@ -35,7 +33,7 @@ server {
         location / {
                 try_files $uri $uri/ =404;
         }
-    
+
     	# 监听/fzf404路径
         location /fzf404 {
         		# 返回类型为html
@@ -59,4 +57,3 @@ location /2048/ {
 	try_files $uri $uri/ =404;
 }
 ```
-

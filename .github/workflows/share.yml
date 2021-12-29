@@ -1,8 +1,8 @@
-name: share-ci 
+name: share-ci
 
 on:
   push:
-    branches: 
+    branches:
       - master
 
 jobs:
@@ -14,5 +14,5 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material mkdocs-minify-plugin
-              
+
       - run: mkdocs gh-deploy --force
