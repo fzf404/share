@@ -37,6 +37,29 @@ func main() {
 go run main.go
 ```
 
+## VsCode插件
+
+```bash
+# 安装失败则执行以下命令
+
+# 换源
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+
+# a
+go get -v github.com/uudashr/gopkgs/v2/cmd/gopkgs
+go get -v github.com/ramya-rao-a/go-outline
+go get -v github.com/cweill/gotests/gotests
+go get -v github.com/fatih/gomodifytags
+go get -v github.com/josharian/impl
+go get -v github.com/haya14busa/goplay/cmd/goplay
+go get -v github.com/go-delve/delve/cmd/dlv
+go get -v honnef.co/go/tools/cmd/staticcheck
+go get -v golang.org/x/tools/gopls
+```
+
+
+
 ## 基础语法
 
 ### 依赖库
