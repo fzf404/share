@@ -105,13 +105,45 @@ type User struct {
 
 func main() {
 	// 连接数据库
+	// 用户名:密码@tcp(ip:port)/库名
 	dsn := "root:1234@tcp(127.0.0.1:3306)/userinfo"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		fmt.Println("mysql 连接失败")
+		fmt.Println("mysql 连接失败: ", err)
 	}
 
 	r := gin.Default()
+
+	r.GET("/login", func(c *gin.Context) {
+		// 获取前端传来的参数
+		username := c.Query("username")
+		password := c.Query("password")
+		// 空结构体实例
+		var user User
+		// 通过用户名查询实例
+		db.Where("Name = ?", username).First(&user)
+		// 验证密码和用户是否存在
+		if user.ID != 0 && user.Password == password {
+			// 登陆成功
+			c.JSON(200, gin.H{
+				"code": 1,
+				"data": gin.H{
+					"id":  user.ID,
+					"age": user.Age,
+				},
+				"msg": "登录成功",
+			})
+			return
+		}
+
+		// 登陆失败
+		c.JSON(200, gin.H{
+			"code": 0,
+			"data": nil,
+			"msg":  "登录失败",
+		})
+	})
+
 	r.POST("/regist", func(c *gin.Context) {
 		// 获取前端传来的参数
 		username := c.PostForm("username")
@@ -126,9 +158,24 @@ func main() {
 			Password: password,
 		}
 		// 写入数据库
-		db.Create(&user)
-		// 返回
+		// 会写入userinfo 库 users 表
+		result := db.Create(&user)
+		
+		if result.Error != nil  {
+			c.JSON(200, gin.H{
+				"code": 0,
+				"data": nil,
+				"msg":  "注册失败",
+			})
+			return
+		}
+		// 成功
 		c.JSON(200, gin.H{
+			"code": 200,
+			"data": gin.H{
+				"id":       user.ID,
+				"username": user.Name,
+			},
 			"msg": "注册成功",
 		})
 	})
