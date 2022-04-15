@@ -16,4 +16,4 @@ jobs:
 
       - run: pip install mkdocs-material mkdocs-minify-plugin
       
-      - run: mkdocs gh-deploy --force --remote-branch main 
+      - run: mkdocs gh-deploy --force
