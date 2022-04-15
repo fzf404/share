@@ -1,14 +1,16 @@
 # 站点信息
-site_name: 技术宅入门指南
-site_description: 给所有人的计算机通识课
+site_name: fzf404 | 分享
+site_description: 给所有人的技术分享
 site_author: fzf404
 site_url: https://share.fzf404.top/
+
 # 仓库信息
 repo_name: fzf404/share
 repo_url: https://github.com/fzf404/share
 edit_uri: edit/master/docs/
 
-copyright: Copyright &copy; 2021 By 你们的小f
+# 版权信息
+copyright: Copyright &copy; 2022 By 你们的小f
 
 # 主题
 theme:
@@ -28,10 +30,11 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-  language: "zh"
+  language: zh
   features:
-    - navigation.tabs
-    - navigation.top
+    - navigation.tabs # 顶部菜单
+    - navigation.top # 一键回顶
+    - search.highlight # 搜索高亮
   font:
     text: Noto Sans
     code: Source Code Pro
