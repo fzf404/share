@@ -1,4 +1,4 @@
-name: share
+name: gh-pages
 
 on:
   push:
