@@ -4,12 +4,12 @@
 >
 > 快速了解前后端及运维知识。
 
-- [教案传送门](https://share.fzf404.top/)
+- [教案传送门](https://share.fzf404.art/)
 - [B 站传送门](https://www.bilibili.com/video/BV1kL4y1B7s5)
 - [课程代码传送门](https://gitee.com/nmdfzf404/share-code)
 - [成品源码传送门 (Github)](https://github.com/fzf404/intro)
 - [成品源码传送门 (Gitee)](https://gitee.com/nmdfzf404/intro)
-- [成品预览（无后端）](https://demo.fzf404.top/intro/)
+- [成品预览（无后端）](https://demo.fzf404.art/intro/)
 
 !!! note "PS"
 

@@ -2,7 +2,7 @@
 site_name: fzf404 | 分享
 site_description: 给所有人的技术分享
 site_author: fzf404
-site_url: https://share.fzf404.top/
+site_url: https://share.fzf404.art/
 
 # 仓库信息
 repo_name: fzf404/share
@@ -15,7 +15,7 @@ copyright: Copyright &copy; 2022 By 你们的小f
 # 主题
 theme:
   name: material
-  logo: "assets/logo.png"
+  logo: 'assets/logo.png'
   favicon: assets/logo.png
   palette:
     - scheme: slate
@@ -54,4 +54,4 @@ markdown_extensions:
 
 # 扩展
 extra:
-  homepage: https://www.fzf404.top
+  homepage: https://www.fzf404.art
