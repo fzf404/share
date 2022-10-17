@@ -1,5 +1,5 @@
-# 关于
+# Share
 
 > 技术分享
 
-[传送门](https://share.fzf404.art/)
+[share.fzf404.art](https://share.fzf404.art/)
