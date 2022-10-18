@@ -10,7 +10,7 @@ repo_url: https://github.com/fzf404/share
 edit_uri: edit/master/docs/
 
 # 版权信息
-copyright: Copyright &copy; 2022 By 你们的小f
+copyright: Copyright &copy; 2022 By fzf404
 
 # 主题
 theme:
@@ -54,4 +54,4 @@ markdown_extensions:
 
 # 扩展
 extra:
-  homepage: https://www.fzf404.art
+  homepage: https://www.fzf404.art/
