@@ -6,17 +6,18 @@ site_url: https://share.fzf404.art/
 
 # 仓库信息
 repo_name: fzf404/share
+edit_uri: edit/main/docs/
 repo_url: https://github.com/fzf404/share
-edit_uri: edit/master/docs/
 
 # 版权信息
 copyright: Copyright &copy; 2022 By fzf404
 
 # 主题
 theme:
+  language: zh
   name: material
-  logo: 'assets/logo.png'
-  favicon: assets/logo.png
+  logo: https://img.fzf404.art/favicon.ico
+  favicon: https://img.fzf404.art/favicon.ico
   palette:
     - scheme: slate
       primary: deep purple
@@ -30,11 +31,10 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-  language: zh
   features:
     - navigation.tabs # 顶部菜单
     - navigation.top # 一键回顶
-    - search.highlight # 搜索高亮
+    - navigation.tracking # 路由跟踪
   font:
     text: Noto Sans
     code: Source Code Pro
@@ -48,10 +48,17 @@ plugins:
 # Markdown扩展
 markdown_extensions:
   - admonition # 注意
+  - pymdownx.keys # 快捷键
+  - pymdownx.tilde # 删除线
   - pymdownx.details # 折叠注意
-  - pymdownx.superfences # 注意中嵌套代码和内容块
+  - pymdownx.tasklist # 任务列表
   - pymdownx.highlight # 代码高亮
+  - pymdownx.superfences # 注意中嵌套代码和内容块
+  - pymdownx.inlinehilite # 行内代码高亮
 
 # 扩展
 extra:
   homepage: https://fzf404.art/
+
+extra_javascript:
+  - assets/analysis.js

@@ -6,5 +6,5 @@ hide:
 
 # 关于
 
-!!! note "PS"
+!!! note Note
     一系列文章/教案
