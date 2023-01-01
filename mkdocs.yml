@@ -16,8 +16,7 @@ copyright: Copyright &copy; 2022 By fzf404
 theme:
   language: zh
   name: material
-  logo: https://img.fzf404.art/favicon.ico
-  favicon: https://img.fzf404.art/favicon.ico
+  favicon: favicon.ico
   palette:
     - scheme: slate
       primary: deep purple
@@ -58,7 +57,7 @@ markdown_extensions:
 
 # 扩展
 extra:
-  homepage: https://fzf404.art/
+  homepage: https://www.fzf404.art/
 
 extra_javascript:
   - assets/analysis.js
