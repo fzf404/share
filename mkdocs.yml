@@ -1,5 +1,5 @@
 # 站点信息
-site_name: fzf404 | 分享
+site_name: fzf404 - 分享
 site_description: 给所有人的技术分享
 site_author: fzf404
 site_url: https://share.fzf404.art/
@@ -14,50 +14,50 @@ copyright: Copyright &copy; 2022 By fzf404
 
 # 主题
 theme:
-  language: zh
-  name: material
-  favicon: favicon.ico
-  palette:
-    - scheme: slate
-      primary: deep purple
-      accent: orange
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-    - scheme: default
-      primary: deep purple
-      accent: orange
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-  features:
-    - navigation.tabs # 顶部菜单
-    - navigation.top # 一键回顶
-    - navigation.tracking # 路由跟踪
-  font:
-    text: Noto Sans
-    code: Source Code Pro
+    language: zh
+    name: material
+    favicon: favicon.ico
+    palette:
+        - scheme: slate
+          primary: deep purple
+          accent: orange
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+        - scheme: default
+          primary: deep purple
+          accent: orange
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+    features:
+        - navigation.tabs # 顶部菜单
+        - navigation.top # 一键回顶
+        - navigation.tracking # 路由跟踪
+    font:
+        text: Noto Sans
+        code: Source Code Pro
 
 # 插件
 plugins:
-  - search
-  - minify:
-      minify_html: true
+    - search
+    - minify:
+          minify_html: true
 
 # Markdown扩展
 markdown_extensions:
-  - admonition # 注意
-  - pymdownx.keys # 快捷键
-  - pymdownx.tilde # 删除线
-  - pymdownx.details # 折叠注意
-  - pymdownx.tasklist # 任务列表
-  - pymdownx.highlight # 代码高亮
-  - pymdownx.superfences # 注意中嵌套代码和内容块
-  - pymdownx.inlinehilite # 行内代码高亮
+    - admonition # 注意
+    - pymdownx.keys # 快捷键
+    - pymdownx.tilde # 删除线
+    - pymdownx.details # 折叠注意
+    - pymdownx.tasklist # 任务列表
+    - pymdownx.highlight # 代码高亮
+    - pymdownx.superfences # 注意中嵌套代码和内容块
+    - pymdownx.inlinehilite # 行内代码高亮
 
 # 扩展
 extra:
-  homepage: https://www.fzf404.art/
+    homepage: https:/fzf404.art/
 
 extra_javascript:
-  - assets/analysis.js
+    - assets/analysis.js
