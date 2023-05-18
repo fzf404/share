@@ -34,6 +34,7 @@ theme:
         - navigation.tabs # 顶部菜单
         - navigation.top # 一键回顶
         - navigation.tracking # 路由跟踪
+        - content.code.copy # 代码块复制
     font:
         text: Noto Sans
         code: Source Code Pro
