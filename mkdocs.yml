@@ -65,7 +65,7 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - 关于: about.md
+  - 关于: index.md
   - 通识课:
       - 00 课程介绍: intro/00-about.md
       - 01 崭新的编辑器: intro/01-editor.md
