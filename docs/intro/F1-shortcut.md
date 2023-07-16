@@ -1,25 +1,26 @@
 ### 00-课程介绍
 
 - 删除：++delete++
-- 复制: ++ctrl+c++
-- 粘贴: ++ctrl+v++
-- 重命名: ++f2++
-- 切换英文: ++shift++
-- 切换输入法: ++ctrl+space++
-- 保存: ++ctrl+s++
-- 另存为: ++ctrl+shift+s++
-- 新建文件夹: ++ctrl+shift+n++
-- 打开文件资源管理器: ++win+e++
+- 复制：++ctrl+c++
+- 粘贴：++ctrl+v++
+- 重命名：++f2++
+- 切换英文：++shift++
+- 切换输入法：++ctrl+space++
+- 保存：++ctrl+s++
+- 另存为：++ctrl+shift+s++
+- 新建文件夹：++ctrl+shift+n++
+- 打开文件资源管理器：++win+e++
 - 新建桌面：++win+tab++
 - 切换桌面：++win+ctrl+left+right++
 
 ### 01-崭新的编辑器
 
 - Edge 浏览器
-    - 收藏夹: ++ctrl+shift+b++
-    - 加入收藏夹: ++ctrl+d++
-    - 历史记录: ++ctrl+h++
-    - 下载列表: ++ctrl+j++
+
+  - 收藏夹：++ctrl+shift+b++
+  - 加入收藏夹：++ctrl+d++
+  - 历史记录：++ctrl+h++
+  - 下载列表：++ctrl+j++
 
 - Visual Studio Code
 
@@ -50,13 +51,13 @@
 | ++ctrl+t++                         | 表格               |
 | ++ctrl+enter++                     | 表格新建一行       |
 | ++ctrl+comma++                     | 打开设置           |
-| ++ctrl+slash++                     | 查看 MarkDown 源码 |
+| ++ctrl+slash++                     | 查看 Markdown 源码 |
 
 ## 02-写个网页吧
 
-- 截屏: ++win+shift+s++
-- 剪贴板历史: ++win+v++
-- 窗口左右移动: ++win+left++ / ++right++
+- 截屏：++win+shift+s++
+- 剪贴板历史：++win+v++
+- 窗口左右移动：++win+left++ / ++right++
 
 - 浏览器
 
@@ -66,7 +67,7 @@
 | ++win+period++             | 输入 Emoji     |
 | ++ctrl+r++                 | 刷新浏览器     |
 
-- vscode
+- VSCode
 
 | 快捷键             | 作用           |
 | ------------------ | -------------- |
@@ -77,13 +78,13 @@
 
 ## 04-程序员的社区
 
-- 无痕窗口: ++ctrl+shift+n++
-- Git 管理: ++ctrl+shift+g++
+- 无痕窗口：++ctrl+shift+n++
+- Git 管理：++ctrl+shift+g++
 
 ## 05-试试 python
 
-- 退出交互式终端: ++ctrl+z++
+- 退出交互式终端：++ctrl+z++
 
 ## 08-前端的姻缘
 
-- 上下代码: ++alt+up++ / ++down++
+- 上下代码：++alt+up++ / ++down++

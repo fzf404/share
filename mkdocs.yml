@@ -1,64 +1,81 @@
-# 站点信息
+# Project
 site_name: fzf404 - 分享
 site_description: 给所有人的技术分享
 site_author: fzf404
 site_url: https://share.fzf404.art/
 
-# 仓库信息
+# Repository
 repo_name: fzf404/share
 edit_uri: edit/main/docs/
 repo_url: https://github.com/fzf404/share
 
-# 版权信息
-copyright: Copyright &copy; 2022 By fzf404
+# Copyright
+copyright: Copyright &copy; 2021 - 2023 By <a href="https://fzf404.art/">fzf404</a>
 
-# 主题
+# Config
 theme:
-    language: zh
-    name: material
-    favicon: favicon.ico
-    palette:
-        - scheme: slate
-          primary: deep purple
-          accent: orange
-          toggle:
-              icon: material/toggle-switch
-              name: Switch to light mode
-        - scheme: default
-          primary: deep purple
-          accent: orange
-          toggle:
-              icon: material/toggle-switch-off-outline
-              name: Switch to dark mode
-    features:
-        - navigation.tabs # 顶部菜单
-        - navigation.top # 一键回顶
-        - navigation.tracking # 路由跟踪
-        - content.code.copy # 代码块复制
-    font:
-        text: Noto Sans
-        code: Source Code Pro
+  language: zh
+  name: material
+  favicon: favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+  font:
+    text: Roboto
+    code: Roboto Mono
 
-# 插件
+# Plugin
 plugins:
-    - search
-    - minify:
-          minify_html: true
+  - search
+  - minify:
+      minify_html: true
 
-# Markdown扩展
-markdown_extensions:
-    - admonition # 注意
-    - pymdownx.keys # 快捷键
-    - pymdownx.tilde # 删除线
-    - pymdownx.details # 折叠注意
-    - pymdownx.tasklist # 任务列表
-    - pymdownx.highlight # 代码高亮
-    - pymdownx.superfences # 注意中嵌套代码和内容块
-    - pymdownx.inlinehilite # 行内代码高亮
-
-# 扩展
+# Custom
 extra:
-    homepage: https:/fzf404.art/
+  homepage: https:/fzf404.art/
 
 extra_javascript:
-    - assets/analysis.js
+  - assets/analysis.js
+
+# Extension
+markdown_extensions:
+  - admonition
+  - pymdownx.keys
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.tasklist
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+# Page tree
+nav:
+  - 关于: about.md
+  - 通识课:
+      - 00 课程介绍: intro/00-about.md
+      - 01 崭新的编辑器: intro/01-editor.md
+      - 02 写个网页吧: intro/02-web.md
+      - 03 覆盖全球的大网: intro/03-network.md
+      - 04 程序员的社区: intro/04-community.md
+      - 05 试试python: intro/05-python.md
+      - 06 产品经理登场: intro/06-product.md
+      - 07 部署到服务器: intro/07-server.md
+      - 08 前端的姻缘: intro/08-frontend.md
+      - 09 后端的姻缘: intro/09-backend.md
+      - F1 快捷键: intro/F1-shortcut.md
+      - F2 初识脚本语言: intro/F2-script.md

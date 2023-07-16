@@ -29,13 +29,13 @@ a_str[1:4] # 第二个字符到第四个字符
 type(a_str)
 
 # 列表
-a_list = ["你好", 'π', "你的值为: ", 3.14]
+a_list = ["你好", 'π', "你的值为：", 3.14]
 type(a_str) # 类型
 a_list[0] # 第1个值, 与c语言数组一样
 a_list[0:3] # 第1个到第3个值
 a_list[2:] # 第2个值到最后一个值
 
-a_dict = { "name": "fzf404", "age":19 } # 字典
+a_dict = { "name"："fzf404", "age":19 } # 字典
 type(a_dict)
 a_dict['name'] # 取值
 
@@ -49,7 +49,7 @@ print('世界不好')
 # 条件循环
 i = 10
 while i > 0:
-  print("倒数10下: ", i)
+  print("倒数10下：", i)
   i-=1 # i=i-1
 
 # 条件判断
@@ -68,7 +68,7 @@ import time
 import json
 
 # 可以在任意位置写语句
-a_list = ["你好", 'π', "你的值为: ", math.pi]
+a_list = ["你好", 'π', "你的值为：", math.pi]
 
 # for 循环
 print("计时开始")
@@ -186,7 +186,7 @@ http://127.0.0.1:8080/info
 
 > 以纯文本格式存储表格内容
 >
-> vscode 插件：`Rainbow CSV`
+> VSCode 插件：`Rainbow CSV`
 
 - 存至：`data.csv`
 

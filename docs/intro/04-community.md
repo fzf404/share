@@ -1,4 +1,4 @@
-> Gitee/Github
+> Gitee / GitHub
 >
 > Git 基本使用
 
@@ -8,9 +8,9 @@
 >
 > CSDN 是写博客的地方，下面的这些网址就是分享代码的地方。
 >
-> [Github](https://github.com/)
+> [GitHub](https://github.com/)
 >
-> [Github 镜像站](https://hub.fastgit.org/)
+> [GitHub 镜像站](https://hub.fastgit.org/)
 >
 > [Gitee](https://gitee.com/)
 
@@ -19,10 +19,9 @@
 
 ### 开源项目
 
-- [vscode](https://github.com/microsoft/vscode)
-- [jquery](https://github.com/jquery/jquery)
-- [如何提问](https://github.com/tvvocold/How-To-Ask-Questions-The-Smart-Way)
-- [女装大佬](https://github.com/komeiji-satori/Dress)
+- [VSCode](https://github.com/microsoft/vscode)
+- [jQuery](https://github.com/jquery/jquery)
+- [提问的艺术](https://github.com/tvvocold/How-To-Ask-Questions-The-Smart-Way)
 
 ### 功能
 
@@ -36,19 +35,19 @@
 1. 访问 [Gitee](https://gitee.com/) 官网
 2. 点击右上角 ➕ 号 -> 新建代码仓库
 3. 填写仓库信息
-4. 新建`README.md`（约定俗成，每个仓库最好都写一个说明文档）
-5. 进入`WebIDE`编辑文件
-6. 发现问题为他提`Issue`
-7. 可以帮助解决则提交``Pull Request`
+4. 新建 `README.md`（约定俗成，每个仓库最好都写一个说明文档）
+5. 进入 `WebIDE` 编辑文件
+6. 发现问题为他提 `Issue`
+7. 可以帮助解决则提交 `Pull Request`
 
 ### 参与
 
 1. 提交 Issue
-    - 使用项目时遇到了问题
-    - 或有一些好建议
+   - 使用项目时遇到了问题
+   - 或有一些好建议
 2. Fork 项目，提交 Pr
-    - 发现代码有 BUG，帮忙修改
-    - 优化代码执行速度
+   - 发现代码有 BUG，帮忙修改
+   - 优化代码执行速度
 
 !!! note Note
 
@@ -66,6 +65,7 @@
 
 1. 下载 [Git](https://git-scm.com/download/win)
 2. 克隆开源项目
+
 ```bash
 # 查看git版本
 git --version
@@ -73,10 +73,12 @@ git --version
 # 从Gitee上Clone下来一个2048游戏吧
 git clone https://gitee.com/yeahmao/games_2048.git
 
-# 在 vscode 中运行
+# 在 VSCode 中运行
 ```
+
 3. 新建 Gitee 仓库：`general-code`
 4. 将自己之前的代码上传至 Gitee 吧
+
 ```bash
 # 设置用户名及邮箱
 git config --global user.name "xxx"
@@ -106,7 +108,7 @@ git push -f origin	# 强制推送
 git pull			# 拉取远程更新的代码
 ```
 
-### 使用 vscode 上传代码
+### 使用 VSCode 上传代码
 
 > 右侧 Git 源代码管理
 
@@ -117,9 +119,9 @@ git pull			# 拉取远程更新的代码
 > 开发需要版本控制系统
 
 1. 代码版本管理
-    - [教案地址](https://github.com/fzf404/share/)
+   - [教案地址](https://github.com/fzf404/share/)
 2. 多分支开发
-    - [vscode](https://github.com/microsoft/vscode)
+   - [VSCode](https://github.com/microsoft/VSCode)
 3. 遇到问题方便回滚
 
 ## 课后

@@ -7,7 +7,7 @@
 1. `index.html`
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,11 @@
 
   <body>
     <h1>你好呀👋</h1>
-    <h2>My name is <span id="name">加载中...</span> <span id="sex"></span></h2>
+    <h2>
+      My name is
+      <span id="name">加载中...</span>
+      <span id="sex"></span>
+    </h2>
     <p id="intro"></p>
     <p id="about">加载中...</p>
     <script src="app.js"></script>
@@ -61,18 +65,18 @@ p {
 3. `app.js`
 
 ```js
-$.getJSON("http://" + document.domain + ":8080/info", function (json) {
-  $("#name").text(json.name);
-  $("#intro").text(json.intro);
-  $("#about").text(json.about);
+$.getJSON('http://' + document.domain + ':8080/info', function (json) {
+  $('#name').text(json.name)
+  $('#intro').text(json.intro)
+  $('#about').text(json.about)
 
   // 0为女生，1为男生
-  if (json.sex == "1") {
-    $("#sex").text("👦");
+  if (json.sex == '1') {
+    $('#sex').text('👦')
   } else {
-    $("#sex").text("👧");
+    $('#sex').text('👧')
   }
-});
+})
 ```
 
 ### 后端
