@@ -72,10 +72,15 @@ nav:
       - 02 写个网页吧: intro/02-web.md
       - 03 覆盖全球的大网: intro/03-network.md
       - 04 程序员的社区: intro/04-community.md
-      - 05 试试python: intro/05-python.md
+      - 05 试试Python: intro/05-python.md
       - 06 产品经理登场: intro/06-product.md
       - 07 部署到服务器: intro/07-server.md
       - 08 前端的姻缘: intro/08-frontend.md
       - 09 后端的姻缘: intro/09-backend.md
       - F1 快捷键: intro/F1-shortcut.md
       - F2 初识脚本语言: intro/F2-script.md
+  - 前端课:
+      - 00 学习路径: web/00-intro.md
+      - 01 样式库: web/01-library.md
+      - 02 代码仓库: web/02-gitee.md
+      
