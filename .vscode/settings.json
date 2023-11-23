@@ -1,6 +1,6 @@
 {
   "editor.tabSize": 4,
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "kkopite.zhlint"
   }
 }
