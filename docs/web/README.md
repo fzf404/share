@@ -2,7 +2,7 @@
 
 - 你知道 GitHub 吗？
 - 你会访问 GitHub 吗？
-- 你知道 MarkDown 是什么吗？
+- 你知道 Markdown 是什么吗？
 - 为什么想学前端？有没有什么想要做的东西？
 
 ## 什么是前端
@@ -20,6 +20,8 @@
 ## 前端怎么写
 
 [标准的网站](https://tailwindui.com/templates)
+
+### 学习路线
 
 - HTML
 - CSS

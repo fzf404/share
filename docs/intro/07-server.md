@@ -129,11 +129,11 @@ server.run('0.0.0.0', port=8080)
 
 ## 将自我介绍页挂起来吧
 
-> 白嫖地址（困难）：[阿里云两周服务器](https://developer.aliyun.com/plan/student)
+> 白嫖地址 (困难)：[阿里云两周服务器](https://developer.aliyun.com/plan/student)
 >
-> 9 元/月：[华为云学生机](https://developer.huaweicloud.com/campus)
+> 9 元 / 月：[华为云学生机](https://developer.huaweicloud.com/campus)
 >
-> 27/3 月：[腾讯云学生机](https://cloud.tencent.com/act/campus)
+> 27 元 / 3 月：[腾讯云学生机](https://cloud.tencent.com/act/campus)
 
 ### 服务器配置
 
@@ -142,19 +142,19 @@ server.run('0.0.0.0', port=8080)
 > 只有云服务器才拥有公网 IP
 
 1. 注册华为云账号
-2. 下载`华为云`APP 进行实名认证
-3. 购买 9/mon 的云服务器，操作系统选择为为`Debian`
+2. 下载 `华为云` APP 进行实名认证
+3. 购买 9/mon 的云服务器，操作系统选择为为 `Debian`
 
 > 我们将使用 debian10 作为服务器系统
 
-4. 进入`控制台` -> 选择`乌兰察布` -> 进入`弹性云服务器ECS`
-5. 进入`安全组` -> 点击`Sys-default` -> 点击`更改安全组规则`
+4. 进入 `控制台` -> 选择 `乌兰察布` -> 进入 `弹性云服务器ECS`
+5. 进入 `安全组` -> 点击 `Sys-default` -> 点击 `更改安全组规则`
 
 > 默认只打开 80 端口，但后端需要用到 8080 端口
 
-6. `入站方向规则` -> 添加`8080`
-7. 点击`远程登录` —> 重置密码
-8. 输入用户名`root`, 密码为刚才设置的密码
+6. `入站方向规则` -> 添加 `8080`
+7. 点击 `远程登录` —> 重置密码
+8. 输入用户名 `root`，密码为刚才设置的密码
 
 ### 部署过程
 
@@ -192,7 +192,7 @@ ps -ef | grep python3
 kill xxx
 
 # 部署后端
-# 安装pip
+# 安装 pip
 apt install python3-pip
 
 # 安装依赖
@@ -211,9 +211,5 @@ nohup python3 main.py &
 
 ### 作业
 
-1. 将目前自己写过的代码进行整理，推送到 Gitee 仓库里
+1. 将目前自己写过的代码进行整理，推送到 Gitee
 2. 部署到自己的服务器
-
-### 推荐阅读
-
-暂无
