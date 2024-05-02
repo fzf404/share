@@ -19,7 +19,7 @@
 
 ## 前端怎么写
 
-[标准的网站](https://tailwindui.com/templates)
+[网站模板 - Tainwind CSS](https://tailwindui.com/templates)
 
 ### 学习路线
 

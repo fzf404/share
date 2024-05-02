@@ -165,6 +165,6 @@ end if
 
 ### 推荐阅读
 
-[整蛊的 VBS+bat 代码](https://zhuanlan.zhihu.com/p/142737363)
+[整蛊的 VBS 代码](https://zhuanlan.zhihu.com/p/142737363)
 
-[VBS--基础语法整理](https://zhuanlan.zhihu.com/p/367897802)
+[VBS 基础语法整理](https://zhuanlan.zhihu.com/p/367897802)

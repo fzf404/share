@@ -1,6 +1,6 @@
 ## 代码仓库
 
-[Gitee](https://gitee.com/)
+[Gitee - 码云](https://gitee.com/)
 
 ### 上传到码云
 
@@ -9,7 +9,7 @@
 3. 根据文档安装并配置 Git
 4. 打开 VSCode 终端
 5. 提交代码
-6. 点击仓库的服务选项卡，开启 Gitee Pages
+6. 点击仓库的服务选项卡，开启 `Gitee Pages`
 
 ### 执行的命令
 

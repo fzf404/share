@@ -53,7 +53,7 @@
 ```html
 <body>
   <h1>你好呀 👋</h1>
-  <h2>My name is 孟祥瑞 👦</h2>
+  <h2>My name is fzf404 👦</h2>
   <p>一枚艺术生，就读于沈阳理工大学动画专业</p>
   <p>
     是修炼中的全栈开发者，左派社会主义接班人，理想主义建政带师，社会化抚养推动者，继承制及死刑的反对者
@@ -298,7 +298,7 @@ function add(a, b) {
     <h1>你好呀 👋</h1>
     <h2>
       My name is
-      <span id="name">孟祥瑞</span>
+      <span id="name">fzf404</span>
       👦
     </h2>
     <p>一枚艺术生，就读于沈阳理工大学动画专业</p>
