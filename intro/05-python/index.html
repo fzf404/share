@@ -1,0 +1,229 @@
+<!doctype html><html lang=zh class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=给所有人的技术分享><meta name=author content=fzf404><link href=https://share.fzf404.art/intro/05-python/ rel=canonical><link href=../04-community/ rel=prev><link href=../06-product/ rel=next><link rel=icon href=../../favicon.ico><meta name=generator content="mkdocs-1.6.0, mkdocs-material-9.5.20"><title>05 试试 Python - fzf404 - 分享</title><link rel=stylesheet href=../../assets/stylesheets/main.66ac8b77.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=deep-purple data-md-color-accent=orange> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#python class=md-skip> 跳转至 </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=页眉> <a href=https:/fzf404.art/ title="fzf404 - 分享" class="md-header__button md-logo" aria-label="fzf404 - 分享" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> fzf404 - 分享 </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> 05 试试 Python </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=deep-purple data-md-color-accent=orange aria-label="Switch to light mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=deep-purple data-md-color-accent=orange aria-label="Switch to dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg> </label> </form> <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=搜索 placeholder=搜索 autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=查找> <button type=reset class="md-search__icon md-icon" title=清空当前内容 aria-label=清空当前内容 tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> 正在初始化搜索引擎 </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/fzf404/share title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> fzf404/share </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=标签 data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../.. class=md-tabs__link> 关于 </a> </li> <li class="md-tabs__item md-tabs__item--active"> <a href=../ class=md-tabs__link> 通识课 </a> </li> <li class=md-tabs__item> <a href=../../web/ class=md-tabs__link> 前端课 </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=导航栏 data-md-level=0> <label class=md-nav__title for=__drawer> <a href=https:/fzf404.art/ title="fzf404 - 分享" class="md-nav__button md-logo" aria-label="fzf404 - 分享" data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg> </a> fzf404 - 分享 </label> <div class=md-nav__source> <a href=https://github.com/fzf404/share title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg> </div> <div class=md-source__repository> fzf404/share </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> <span class=md-ellipsis> 关于 </span> </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_2 checked> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex> <span class=md-ellipsis> 通识课 </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=true> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> 通识课 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../ class=md-nav__link> <span class=md-ellipsis> 00 课程介绍 </span> </a> </li> <li class=md-nav__item> <a href=../01-editor/ class=md-nav__link> <span class=md-ellipsis> 01 崭新的编辑器 </span> </a> </li> <li class=md-nav__item> <a href=../02-web/ class=md-nav__link> <span class=md-ellipsis> 02 写个网页吧 </span> </a> </li> <li class=md-nav__item> <a href=../03-network/ class=md-nav__link> <span class=md-ellipsis> 03 覆盖全球的大网 </span> </a> </li> <li class=md-nav__item> <a href=../04-community/ class=md-nav__link> <span class=md-ellipsis> 04 程序员的社区 </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> 05 试试 Python </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> 05 试试 Python </span> </a> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#python class=md-nav__link> <span class=md-ellipsis> Python 基础 </span> </a> <nav class=md-nav aria-label="Python 基础"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_1 class=md-nav__link> <span class=md-ellipsis> 语法特点 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_2 class=md-nav__link> <span class=md-ellipsis> 写个接口吧 </span> </a> <nav class=md-nav aria-label=写个接口吧> <ul class=md-nav__list> <li class=md-nav__item> <a href=#hello class=md-nav__link> <span class=md-ellipsis> Hello </span> </a> </li> <li class=md-nav__item> <a href=#info class=md-nav__link> <span class=md-ellipsis> Info </span> </a> </li> <li class=md-nav__item> <a href=#csv class=md-nav__link> <span class=md-ellipsis> csv 文件 </span> </a> <nav class=md-nav aria-label="csv 文件"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_3 class=md-nav__link> <span class=md-ellipsis> 读取文件 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_4 class=md-nav__link> <span class=md-ellipsis> 获取前端传来的信息 </span> </a> </li> <li class=md-nav__item> <a href=#_5 class=md-nav__link> <span class=md-ellipsis> 完成接口 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_6 class=md-nav__link> <span class=md-ellipsis> 课后 </span> </a> <nav class=md-nav aria-label=课后> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_7 class=md-nav__link> <span class=md-ellipsis> 作业 </span> </a> </li> <li class=md-nav__item> <a href=#_8 class=md-nav__link> <span class=md-ellipsis> 推荐阅读 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../06-product/ class=md-nav__link> <span class=md-ellipsis> 06 产品经理登场 </span> </a> </li> <li class=md-nav__item> <a href=../07-server/ class=md-nav__link> <span class=md-ellipsis> 07 部署到服务器 </span> </a> </li> <li class=md-nav__item> <a href=../08-frontend/ class=md-nav__link> <span class=md-ellipsis> 08 前端的姻缘 </span> </a> </li> <li class=md-nav__item> <a href=../09-backend/ class=md-nav__link> <span class=md-ellipsis> 09 后端的姻缘 </span> </a> </li> <li class=md-nav__item> <a href=../F1-shortcut/ class=md-nav__link> <span class=md-ellipsis> F1 快捷键 </span> </a> </li> <li class=md-nav__item> <a href=../F2-script/ class=md-nav__link> <span class=md-ellipsis> F2 初识脚本语言 </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3 id=__nav_3_label tabindex=0> <span class=md-ellipsis> 前端课 </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> 前端课 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../web/ class=md-nav__link> <span class=md-ellipsis> 00 课程介绍 </span> </a> </li> <li class=md-nav__item> <a href=../../web/01-library/ class=md-nav__link> <span class=md-ellipsis> 01 样式库 </span> </a> </li> <li class=md-nav__item> <a href=../../web/02-gitee/ class=md-nav__link> <span class=md-ellipsis> 02 代码仓库 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#python class=md-nav__link> <span class=md-ellipsis> Python 基础 </span> </a> <nav class=md-nav aria-label="Python 基础"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_1 class=md-nav__link> <span class=md-ellipsis> 语法特点 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_2 class=md-nav__link> <span class=md-ellipsis> 写个接口吧 </span> </a> <nav class=md-nav aria-label=写个接口吧> <ul class=md-nav__list> <li class=md-nav__item> <a href=#hello class=md-nav__link> <span class=md-ellipsis> Hello </span> </a> </li> <li class=md-nav__item> <a href=#info class=md-nav__link> <span class=md-ellipsis> Info </span> </a> </li> <li class=md-nav__item> <a href=#csv class=md-nav__link> <span class=md-ellipsis> csv 文件 </span> </a> <nav class=md-nav aria-label="csv 文件"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_3 class=md-nav__link> <span class=md-ellipsis> 读取文件 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_4 class=md-nav__link> <span class=md-ellipsis> 获取前端传来的信息 </span> </a> </li> <li class=md-nav__item> <a href=#_5 class=md-nav__link> <span class=md-ellipsis> 完成接口 </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_6 class=md-nav__link> <span class=md-ellipsis> 课后 </span> </a> <nav class=md-nav aria-label=课后> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_7 class=md-nav__link> <span class=md-ellipsis> 作业 </span> </a> </li> <li class=md-nav__item> <a href=#_8 class=md-nav__link> <span class=md-ellipsis> 推荐阅读 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1>05 试试 Python</h1> <blockquote> <p>Python 基础、Flask 后端开发</p> </blockquote> <h2 id=python>Python 基础</h2> <blockquote> <p>互联网上最热门的编程语言。</p> <p><a href=https://www.python.org/downloads/windows/ >下载地址</a></p> <p>版本：<code>3.8.10 win-64</code></p> </blockquote> <div class=highlight><pre><span></span><code><span class=c1># 进入交互式界面</span>
+<span class=err>$</span> <span class=n>python</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;hello world&#39;</span><span class=p>)</span>
+<span class=n>helloworld</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>answer</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&quot;你的名字：&quot;</span><span class=p>)</span>
+
+<span class=c1># Ctrl + Z 后按Enter，退出交互界面</span>
+
+<span class=c1># 数据类型</span>
+<span class=n>a_num</span> <span class=o>=</span> <span class=mi>404</span>
+<span class=nb>type</span><span class=p>(</span><span class=n>a_num</span><span class=p>)</span>
+
+<span class=n>a_str</span> <span class=o>=</span> <span class=s2>&quot;这是一个字符串&quot;</span>
+<span class=n>a_str</span><span class=p>[</span><span class=mi>4</span><span class=p>]</span>
+<span class=n>a_str</span><span class=p>[</span><span class=mi>1</span><span class=p>:</span><span class=mi>4</span><span class=p>]</span> <span class=c1># 第二个字符到第四个字符</span>
+<span class=nb>type</span><span class=p>(</span><span class=n>a_str</span><span class=p>)</span>
+
+<span class=c1># 列表</span>
+<span class=n>a_list</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&quot;你好&quot;</span><span class=p>,</span> <span class=s1>&#39;π&#39;</span><span class=p>,</span> <span class=s2>&quot;你的值为：&quot;</span><span class=p>,</span> <span class=mf>3.14</span><span class=p>]</span>
+<span class=nb>type</span><span class=p>(</span><span class=n>a_str</span><span class=p>)</span> <span class=c1># 类型</span>
+<span class=n>a_list</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=c1># 第1个值, 与c语言数组一样</span>
+<span class=n>a_list</span><span class=p>[</span><span class=mi>0</span><span class=p>:</span><span class=mi>3</span><span class=p>]</span> <span class=c1># 第1个到第3个值</span>
+<span class=n>a_list</span><span class=p>[</span><span class=mi>2</span><span class=p>:]</span> <span class=c1># 第2个值到最后一个值</span>
+
+<span class=n>a_dict</span> <span class=o>=</span> <span class=p>{</span> <span class=s2>&quot;name&quot;</span><span class=err>：</span><span class=s2>&quot;fzf404&quot;</span><span class=p>,</span> <span class=s2>&quot;age&quot;</span><span class=p>:</span><span class=mi>19</span> <span class=p>}</span> <span class=c1># 字典</span>
+<span class=nb>type</span><span class=p>(</span><span class=n>a_dict</span><span class=p>)</span>
+<span class=n>a_dict</span><span class=p>[</span><span class=s1>&#39;name&#39;</span><span class=p>]</span> <span class=c1># 取值</span>
+
+
+<span class=c1># 循环</span>
+<span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;hello world&#39;</span><span class=p>)</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;你好世界&#39;</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;世界不好&#39;</span><span class=p>)</span>
+
+<span class=c1># 条件循环</span>
+<span class=n>i</span> <span class=o>=</span> <span class=mi>10</span>
+<span class=k>while</span> <span class=n>i</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>:</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;倒数10下：&quot;</span><span class=p>,</span> <span class=n>i</span><span class=p>)</span>
+  <span class=n>i</span><span class=o>-=</span><span class=mi>1</span> <span class=c1># i=i-1</span>
+
+<span class=c1># 条件判断</span>
+<span class=n>answer</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&quot;你是猪吗？&quot;</span><span class=p>)</span>
+<span class=k>if</span> <span class=n>answer</span> <span class=o>==</span> <span class=s1>&#39;是&#39;</span><span class=p>:</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;真可爱&quot;</span><span class=p>)</span>
+<span class=k>elif</span> <span class=n>answer</span> <span class=o>==</span> <span class=s1>&#39;yes&#39;</span><span class=p>:</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;so cute&quot;</span><span class=p>)</span>
+<span class=k>else</span><span class=p>:</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;肮脏的人类&quot;</span><span class=p>)</span>
+
+
+<span class=c1># 引入扩展包</span>
+<span class=kn>import</span> <span class=nn>math</span>
+<span class=kn>import</span> <span class=nn>time</span>
+<span class=kn>import</span> <span class=nn>json</span>
+
+<span class=c1># 可以在任意位置写语句</span>
+<span class=n>a_list</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&quot;你好&quot;</span><span class=p>,</span> <span class=s1>&#39;π&#39;</span><span class=p>,</span> <span class=s2>&quot;你的值为：&quot;</span><span class=p>,</span> <span class=n>math</span><span class=o>.</span><span class=n>pi</span><span class=p>]</span>
+
+<span class=c1># for 循环</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&quot;计时开始&quot;</span><span class=p>)</span>
+<span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>10</span><span class=p>):</span>
+  <span class=nb>print</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+  <span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
+
+<span class=c1># 类型转换</span>
+<span class=nb>str</span><span class=p>(</span><span class=mi>404</span><span class=p>)</span>
+<span class=nb>list</span><span class=p>(</span><span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>10</span><span class=p>))</span>
+
+<span class=c1># 遍历列表</span>
+<span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>a_list</span><span class=p>:</span>
+  <span class=nb>print</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+
+<span class=c1># 函数</span>
+<span class=k>def</span> <span class=nf>add</span><span class=p>(</span><span class=n>a</span><span class=p>,</span> <span class=n>b</span><span class=p>):</span>
+  <span class=k>return</span> <span class=n>a</span> <span class=o>+</span> <span class=n>b</span>
+
+
+<span class=c1># 打开文件</span>
+<span class=n>json_file</span> <span class=o>=</span> <span class=nb>open</span><span class=p>(</span><span class=s1>&#39;info.json&#39;</span><span class=p>,</span><span class=s1>&#39;r&#39;</span><span class=p>,</span><span class=n>encoding</span><span class=o>=</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span>
+
+<span class=c1># 读取文件为字符串</span>
+<span class=n>json_data</span> <span class=o>=</span> <span class=n>json_file</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
+<span class=c1># 字符串转字典</span>
+<span class=n>json_dict</span> <span class=o>=</span> <span class=n>json</span><span class=o>.</span><span class=n>loads</span><span class=p>(</span><span class=n>json_data</span><span class=p>)</span>
+<span class=c1># 字典取值</span>
+<span class=n>json_dict</span><span class=p>[</span><span class=s2>&quot;name&quot;</span><span class=p>]</span>
+
+<span class=c1># 关闭文件</span>
+<span class=n>json_file</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+</code></pre></div> <h3 id=_1>语法特点</h3> <ol> <li>弱类型语言，无需指定变量类型就可以使用变量。</li> <li>使用缩进确认代码归属，无需大括号和分号。</li> </ol> <h2 id=_2>写个接口吧</h2> <blockquote> <p>使用 <code>flask</code> 写后端。</p> <p>安装第三方库：<code>pip install flask</code></p> </blockquote> <h3 id=hello>Hello</h3> <blockquote> <p>启动：<code>python 01-hello.py</code></p> </blockquote> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>flask</span> <span class=kn>import</span> <span class=n>Flask</span>
+
+<span class=n>server</span> <span class=o>=</span> <span class=n>Flask</span><span class=p>(</span><span class=s1>&#39;app&#39;</span><span class=p>)</span>
+
+<span class=nd>@server</span><span class=o>.</span><span class=n>route</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>)</span>
+<span class=k>def</span> <span class=nf>index</span><span class=p>():</span>
+  <span class=k>return</span> <span class=s1>&#39;Hello Flask!&#39;</span>
+
+<span class=n>server</span><span class=o>.</span><span class=n>run</span><span class=p>()</span>
+
+<span class=sd>&#39;&#39;&#39;</span>
+<span class=sd> * Serving Flask app &#39;app&#39; (lazy loading)</span>
+<span class=sd> * Environment: production</span>
+<span class=sd>   WARNING: This is a development server. Do not use it in a production deployment.</span>
+<span class=sd>   Use a production WSGI server instead.</span>
+<span class=sd> * Debug mode: off</span>
+<span class=sd> * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</span>
+<span class=sd>&#39;&#39;&#39;</span>
+</code></pre></div> <h3 id=info>Info</h3> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>flask</span> <span class=kn>import</span> <span class=n>Flask</span>
+
+<span class=c1># 新建服务</span>
+<span class=n>server</span> <span class=o>=</span> <span class=n>Flask</span><span class=p>(</span><span class=s2>&quot;app&quot;</span><span class=p>)</span>
+
+<span class=c1># 定义路由</span>
+<span class=nd>@server</span><span class=o>.</span><span class=n>route</span><span class=p>(</span><span class=s1>&#39;/&#39;</span><span class=p>)</span>
+<span class=k>def</span> <span class=nf>index</span><span class=p>():</span>
+    <span class=k>return</span> <span class=s1>&#39;Hello Flask!&#39;</span>
+
+<span class=c1># 定义路由</span>
+<span class=nd>@server</span><span class=o>.</span><span class=n>route</span><span class=p>(</span><span class=s1>&#39;/info&#39;</span><span class=p>)</span>
+<span class=k>def</span> <span class=nf>get_info</span><span class=p>():</span>
+
+    <span class=c1># 发送的数据</span>
+    <span class=n>data</span> <span class=o>=</span> <span class=p>{</span>
+        <span class=s2>&quot;name&quot;</span><span class=p>:</span> <span class=s2>&quot;王山而&quot;</span><span class=p>,</span>
+        <span class=s2>&quot;sex&quot;</span><span class=p>:</span> <span class=mi>0</span><span class=p>,</span>
+        <span class=s2>&quot;intro&quot;</span><span class=p>:</span> <span class=s2>&quot;大一学生，就读于沈阳理工大学物联网专业。&quot;</span><span class=p>,</span>
+        <span class=s2>&quot;about&quot;</span><span class=p>:</span> <span class=s2>&quot;身体健康，大脑健全，心态良好，反诈骗能力高。啥都不会，进去想学东西的，emmmm没了。&quot;</span>
+    <span class=p>}</span>
+
+    <span class=c1># 第二种方式</span>
+    <span class=n>file</span> <span class=o>=</span> <span class=nb>open</span><span class=p>(</span><span class=s1>&#39;info.json&#39;</span><span class=p>,</span><span class=s1>&#39;r&#39;</span><span class=p>,</span><span class=n>encoding</span><span class=o>=</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span>
+    <span class=n>data</span> <span class=o>=</span> <span class=n>file</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
+    <span class=n>file</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+
+    <span class=c1># 更高级的方式</span>
+    <span class=k>with</span> <span class=nb>open</span><span class=p>(</span><span class=n>data_path</span><span class=p>,</span> <span class=s1>&#39;r&#39;</span><span class=p>,</span> <span class=n>encoding</span><span class=o>=</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span>
+        <span class=n>data</span> <span class=o>=</span> <span class=n>f</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
+
+    <span class=k>return</span> <span class=n>data</span>
+
+<span class=c1># 开启服务</span>
+<span class=n>server</span><span class=o>.</span><span class=n>run</span><span class=p>(</span><span class=s1>&#39;127.0.0.1&#39;</span><span class=p>,</span> <span class=n>port</span><span class=o>=</span><span class=mi>8080</span><span class=p>)</span>
+
+<span class=c1># 前端修改请求地址</span>
+<span class=n>http</span><span class=p>:</span><span class=o>//</span><span class=mf>127.0.0.1</span><span class=p>:</span><span class=mi>8080</span><span class=o>/</span><span class=n>info</span>
+</code></pre></div> <h3 id=csv>csv 文件</h3> <blockquote> <p>以纯文本格式存储表格内容。</p> <p>VSCode 插件：<code>Rainbow CSV</code></p> </blockquote> <ul> <li>存至：<code>data.csv</code></li> </ul> <div class=highlight><pre><span></span><code><span class=mi>1607030215</span><span class=p>,</span><span class=n>fzf404</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=err>一枚艺术生，就读于沈阳理工大学动画专业。</span><span class=p>,</span><span class=err>是修炼中的全栈开发者，左派社会主义接班人，理想主义建政带师。社会化抚养推动者，继承制及死刑的反对者。轨道交通迷。</span>
+<span class=mi>1607030216</span><span class=p>,</span><span class=err>王山而</span><span class=p>,</span><span class=mi>1</span><span class=p>,</span><span class=err>大一学生，就读于沈阳理工大学艺术设计专业。</span><span class=p>,</span><span class=err>身体健康，大脑健全，审美良好，抗压能力强。啥都不会，进去想学东西的，</span><span class=n>emmmm没了</span><span class=err>。</span>
+</code></pre></div> <h4 id=_3>读取文件</h4> <div class=highlight><pre><span></span><code><span class=kn>import</span> <span class=nn>csv</span>
+
+<span class=n>data_path</span> <span class=o>=</span> <span class=s1>&#39;data.csv&#39;</span>
+
+<span class=c1># 打开csv文件</span>
+<span class=n>file_csv</span> <span class=o>=</span> <span class=nb>open</span><span class=p>(</span><span class=n>data_path</span><span class=p>,</span> <span class=s1>&#39;r&#39;</span><span class=p>,</span> <span class=n>encoding</span><span class=o>=</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span>
+
+<span class=c1># 读取csv内容为str</span>
+<span class=c1># str_csv = file_csv.read()</span>
+
+<span class=c1># 将内容解析出来</span>
+<span class=n>object_csv</span> <span class=o>=</span> <span class=n>csv</span><span class=o>.</span><span class=n>reader</span><span class=p>(</span><span class=n>file_csv</span><span class=p>)</span> <span class=c1># 可以使用for遍历</span>
+
+<span class=c1># 关闭文件</span>
+<span class=n>file_csv</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+
+<span class=c1># 转换为二维列表</span>
+<span class=n>list_csv</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=n>object_csv</span><span class=p>)</span>
+
+<span class=c1># 遍历列表</span>
+<span class=k>for</span> <span class=n>item</span> <span class=ow>in</span> <span class=n>list_csv</span><span class=p>:</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;学号：&quot;</span><span class=p>,</span> <span class=n>item</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;姓名：&quot;</span><span class=p>,</span> <span class=n>item</span><span class=p>[</span><span class=mi>2</span><span class=p>])</span>
+  <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;源信息：&quot;</span><span class=p>,</span> <span class=n>item</span><span class=p>)</span>
+</code></pre></div> <h3 id=_4>获取前端传来的信息</h3> <div class=highlight><pre><span></span><code><span class=kn>import</span> <span class=nn>csv</span>
+<span class=kn>from</span> <span class=nn>flask</span> <span class=kn>import</span> <span class=n>Flask</span><span class=p>,</span> <span class=n>request</span>
+
+<span class=n>server</span> <span class=o>=</span> <span class=n>Flask</span><span class=p>(</span><span class=s1>&#39;app&#39;</span><span class=p>)</span>
+
+<span class=n>data_path</span> <span class=o>=</span> <span class=s1>&#39;data.csv&#39;</span>
+
+<span class=nd>@server</span><span class=o>.</span><span class=n>route</span><span class=p>(</span><span class=s1>&#39;/info&#39;</span><span class=p>)</span>
+<span class=k>def</span> <span class=nf>get_info</span><span class=p>():</span>
+
+  <span class=c1># 获得url中的id</span>
+  <span class=n>user_id</span> <span class=o>=</span> <span class=n>request</span><span class=o>.</span><span class=n>args</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>&#39;id&#39;</span><span class=p>)</span>
+
+  <span class=nb>print</span><span class=p>(</span><span class=s2>&quot;用户ID：&quot;</span><span class=p>,</span> <span class=n>user_id</span><span class=p>)</span>
+
+  <span class=c1># 所有接口必须有返回值</span>
+  <span class=k>return</span> <span class=s1>&#39;Test Get ID&#39;</span>
+</code></pre></div> <h3 id=_5>完成接口</h3> <div class=highlight><pre><span></span><code><span class=kn>import</span> <span class=nn>csv</span>
+<span class=kn>from</span> <span class=nn>flask</span> <span class=kn>import</span> <span class=n>Flask</span><span class=p>,</span> <span class=n>request</span>
+
+<span class=n>server</span> <span class=o>=</span> <span class=n>Flask</span><span class=p>(</span><span class=s1>&#39;app&#39;</span><span class=p>)</span>
+
+<span class=n>data_path</span> <span class=o>=</span> <span class=s1>&#39;data.csv&#39;</span>
+
+<span class=nd>@server</span><span class=o>.</span><span class=n>route</span><span class=p>(</span><span class=s1>&#39;/api/info&#39;</span><span class=p>)</span>
+<span class=k>def</span> <span class=nf>get_info</span><span class=p>():</span>
+  <span class=c1># 获得url中的id</span>
+  <span class=n>user_id</span> <span class=o>=</span> <span class=n>request</span><span class=o>.</span><span class=n>args</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>&#39;id&#39;</span><span class=p>)</span>
+
+  <span class=c1># 打开文件</span>
+  <span class=n>file</span> <span class=o>=</span> <span class=nb>open</span><span class=p>(</span><span class=n>data_path</span><span class=p>,</span> <span class=s1>&#39;r&#39;</span><span class=p>,</span> <span class=n>encoding</span><span class=o>=</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span>
+  <span class=c1># 转换为列表</span>
+  <span class=n>data</span> <span class=o>=</span> <span class=n>csv</span><span class=o>.</span><span class=n>reader</span><span class=p>(</span><span class=n>file</span><span class=p>)</span>
+
+  <span class=k>for</span> <span class=n>item</span> <span class=ow>in</span> <span class=n>data</span><span class=p>:</span>
+    <span class=k>if</span> <span class=n>item</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>==</span> <span class=n>user_id</span><span class=p>:</span>
+      <span class=k>return</span> <span class=p>{</span>
+          <span class=s2>&quot;name&quot;</span><span class=p>:</span> <span class=n>item</span><span class=p>[</span><span class=mi>1</span><span class=p>],</span>
+          <span class=s2>&quot;sex&quot;</span><span class=p>:</span> <span class=n>item</span><span class=p>[</span><span class=mi>2</span><span class=p>],</span>
+          <span class=s2>&quot;intro&quot;</span><span class=p>:</span> <span class=n>item</span><span class=p>[</span><span class=mi>3</span><span class=p>],</span>
+          <span class=s2>&quot;about&quot;</span><span class=p>:</span> <span class=n>item</span><span class=p>[</span><span class=mi>4</span><span class=p>]</span>
+      <span class=p>}</span>
+
+  <span class=c1># 关闭文件</span>
+  <span class=n>file</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+
+  <span class=c1># 没有匹配，则返回空</span>
+  <span class=k>return</span> <span class=p>{</span>
+    <span class=s2>&quot;name&quot;</span><span class=p>:</span> <span class=kc>None</span><span class=p>,</span>
+    <span class=s2>&quot;sex&quot;</span><span class=p>:</span> <span class=kc>None</span><span class=p>,</span>
+    <span class=s2>&quot;intro&quot;</span><span class=p>:</span> <span class=kc>None</span><span class=p>,</span>
+    <span class=s2>&quot;about&quot;</span><span class=p>:</span> <span class=kc>None</span>
+  <span class=p>}</span>
+
+<span class=c1># 开启服务</span>
+<span class=n>server</span><span class=o>.</span><span class=n>run</span><span class=p>(</span><span class=s1>&#39;127.0.0.1&#39;</span><span class=p>,</span> <span class=n>port</span><span class=o>=</span><span class=mi>8080</span><span class=p>)</span>
+</code></pre></div> <h2 id=_6>课后</h2> <h3 id=_7>作业</h3> <ol> <li>使用 python 打印九九乘法表。</li> <li>完成自我介绍页的前后端，传至 Gitee 中。</li> </ol> <h3 id=_8>推荐阅读</h3> <p><a href=https://zhuanlan.zhihu.com/p/56595142>python 基础知识总结</a></p> <p><a href=https://zhuanlan.zhihu.com/p/73278003>2333 一个挺有趣的 flask 教程</a></p> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> 回到页面顶部 </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2021 - 2023 By <a href=https://fzf404.art/ >fzf404</a> </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script> <script src=../../assets/javascripts/bundle.dd8806f2.min.js></script> <script src=../../assets/analysis.js></script> </body> </html>
